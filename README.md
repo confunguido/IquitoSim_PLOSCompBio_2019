@@ -3,3 +3,4 @@
 * The repository contains two sets of code:
   1) Agent-based model C++ code [abm_code]
   2) R-scripts to generate the manuscript figures from the output of thousands of model simulations [figures_code]
+  The R-scripts to generate the figures assume a working directory in figures_code/scripts
