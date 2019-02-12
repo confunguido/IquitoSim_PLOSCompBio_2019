@@ -1,4 +1,9 @@
-
+#======================================================================================#
+# Author: Guido España, Alex Perkins
+# analyze output of parameter sweep of vaccine properties
+# project: PLOS COMP BIO paper 2019 Iquitos
+# Year: 2019
+#======================================================================================#
 data_psa = readRDS('PSA_table_normdev_vaccine.RDS')
 
 #    lo hi range
@@ -16,7 +21,7 @@ data2a = subset(
   scenario%in%c('bite_0.5_immunity_exp_686','immunity_exp_686','bite_2.0_immunity_exp_686') &
     parameter=='vaccine_normdev_pos_1')[c(1,3,2,4,6,5),]
 
-pdf(file='../output/supplement_figure_S28_sens_cyd_biting.pdf',width=6.5,height=4.5)
+pdf(file='../output/FigureS28_sens_cyd_biting.pdf',width=6.5,height=4.5)
 
 layout(rbind(matrix(1:4,2,2,byrow=T),c(5,5)),heights=c(1,1,0.4))
 par(mar=c(5,2.5,0.5,1),oma=c(0,0.5,3,0))
@@ -57,7 +62,7 @@ data2a = subset(
   scenario%in%c('death_0.5_immunity_exp_686','immunity_exp_686','death_2.0_immunity_exp_686') &
   parameter=='vaccine_normdev_pos_1')[c(1,3,2,4,6,5),]
 
-pdf(file='../output/supplement_figure_S29_sens_cyd_death.pdf',width=6.5,height=4.5)
+pdf(file='../output/FigureS29_sens_cyd_death.pdf',width=6.5,height=4.5)
 
 layout(rbind(matrix(1:4,2,2,byrow=T),c(5,5)),heights=c(1,1,0.4))
 par(mar=c(5,2.5,0.5,1),oma=c(0,0.5,3,0))
@@ -100,7 +105,7 @@ data2a = subset(
   scenario%in%c('eip_0.5_immunity_exp_686','immunity_exp_686','eip_2.0_immunity_exp_686') &
   parameter=='vaccine_normdev_pos_1')[c(1,3,2,4,6,5),]
 
-pdf(file='../output/supplement_figure_S30_sens_cyd_eip.pdf',width=6.5,height=4.5)
+pdf(file='../output/FigureS30_sens_cyd_eip.pdf',width=6.5,height=4.5)
 
 layout(rbind(matrix(1:4,2,2,byrow=T),c(5,5)),heights=c(1,1,0.4))
 par(mar=c(5,2.5,0.5,1),oma=c(0,0.5,3,0))
@@ -143,7 +148,7 @@ data2a = subset(
   scenario%in%c('pmove_0.1_immunity_exp_686','immunity_exp_686','pmove_0.5_immunity_exp_686') &
   parameter=='vaccine_normdev_pos_1')[c(1,3,2,4,6,5),]
 
-pdf(file='../output/supplement_figure_S31_sens_cyd_pmove.pdf',width=6.5,height=4.5)
+pdf(file='../output/FigureS31_sens_cyd_pmove.pdf',width=6.5,height=4.5)
 
 layout(rbind(matrix(1:4,2,2,byrow=T),c(5,5)),heights=c(1,1,0.4))
 par(mar=c(5,2.5,0.5,1),oma=c(0,0.5,3,0))
@@ -186,7 +191,7 @@ data2a = subset(
   scenario%in%c('immunity_exp_686','asymp_0.5_immunity_exp_686') &
   parameter=='vaccine_normdev_pos_1')[c(2,1,4,3),]
 
-pdf(file='../output/supplement_figure_S24_sens_cyd_asymp.pdf',width=6.5,height=4.5)
+pdf(file='../output/FigureS24_sens_cyd_asymp.pdf',width=6.5,height=4.5)
 
 layout(rbind(matrix(1:4,2,2,byrow=T),c(5,5)),heights=c(1,1,0.4))
 par(mar=c(5,2.5,0.5,1),oma=c(0,0.5,3,0))
@@ -229,7 +234,7 @@ data2a = subset(
   scenario%in%c('immunity_exp_686','p_0.5_immunity_exp_686') &
   parameter=='vaccine_normdev_pos_1')[c(2,1,4,3),]
 
-pdf(file='../output/supplement_figure_S27_sens_cyd_mozinfec.pdf',width=6.5,height=4.5)
+pdf(file='../output/FigureS27_sens_cyd_mozinfec.pdf',width=6.5,height=4.5)
 
 layout(rbind(matrix(1:4,2,2,byrow=T),c(5,5)),heights=c(1,1,0.4))
 par(mar=c(5,2.5,0.5,1),oma=c(0,0.5,3,0))
@@ -272,7 +277,7 @@ data2a = subset(
   scenario%in%c('immunity_exp_686','immunity_exp_180') &
   parameter=='vaccine_normdev_pos_1')[c(2,1,4,3),]
 
-pdf(file='../output/supplement_figure_S25_sens_cyd_immunity_duration.pdf',width=6.5,height=4.5)
+pdf(file='../output/FigureS25_sens_cyd_immunity_duration.pdf',width=6.5,height=4.5)
 
 layout(rbind(matrix(1:4,2,2,byrow=T),c(5,5)),heights=c(1,1,0.4))
 par(mar=c(5,2.5,0.5,1),oma=c(0,0.5,3,0))
@@ -313,7 +318,7 @@ data2a = subset(
   scenario%in%c('immunity_exp_686','immunity_fixed_686') &
     parameter=='vaccine_normdev_pos_1')
 
-pdf(file='../output/supplement_figure_S26_sens_cyd_immunity_distribution.pdf',width=6.5,height=4.5)
+pdf(file='../output/FigureS26_sens_cyd_immunity_distribution.pdf',width=6.5,height=4.5)
 
 layout(rbind(matrix(1:4,2,2,byrow=T),c(5,5)),heights=c(1,1,0.4))
 par(mar=c(5,2.5,0.5,1),oma=c(0,0.5,3,0))

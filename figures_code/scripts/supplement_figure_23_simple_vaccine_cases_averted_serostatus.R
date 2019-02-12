@@ -1,11 +1,8 @@
 #======================================================================================#
-# Author: Guido Espana
+# Author: Guido España, Alex Perkins
 # analyze output of parameter sweep of vaccine properties
-# project: PLOS COMP BIO paper 2017 Iquitos
-# Year: 2017
-#
-# requires:
-#          ./sweep_plot_functions.R
+# project: PLOS COMP BIO paper 2019 Iquitos
+# Year: 2019
 #======================================================================================#
 # User's input--------
 #======================================================================================#
@@ -38,7 +35,7 @@ gam.dis = gam(dis_averted ~
 #======================================================================================#
 # Create two figures of cases averted: p,VEmean, and VEserostatus, VEserotype --------
 #======================================================================================#
-pdf('../output/supplement_figure_S23_PLOS_CMP_BIO_3_manuscript_simple_vac_infections_averted_serostatus_status_type.pdf',width=7.5,height=7.5)
+pdf('../output/FigureS23_PLOS_CMP_BIO_3_manuscript_simple_vac_infections_averted_serostatus_status_type.pdf',width=7.5,height=7.5)
  layout(matrix(1:4,2,2,byrow = T))
  par(oma=c(3,4.5,0,0),mar=c(0.5,0.5,0.5,.5))
  

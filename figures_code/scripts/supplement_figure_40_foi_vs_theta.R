@@ -1,13 +1,21 @@
-# goodness of fit measure for fitting theta
+##======================================================================================##
+## Author: Guido España, Alex Perkins
+## analyze output of parameter sweep of vaccine properties
+## project: PLOS COMP BIO paper 2019 Iquitos
+## Year: 2019
+##======================================================================================##
+
+## goodness of fit measure for fitting theta
+
 theta.gof = function(theta){
   abs(VE.in - 1 + sum((1-(1-theta)^(1:100))*dpois(1:100,foidt.in)) / sum(dpois(1:100,foidt.in)))
 }
 
-# range of values of VE and foidt
+## range of values of VE and foidt
 VE.vec = seq(0,1,length.out=100)
 foidt.vec = seq(0.1,0.3,0.1)
 
-# calculate theta for all values of VE and foidt
+## calculate theta for all values of VE and foidt
 theta.mat = matrix(0,length(VE.vec),length(foidt.vec))
 for(vv in 1:length(VE.vec)){
   for(ff in 1:length(foidt.vec)){
@@ -17,8 +25,8 @@ for(vv in 1:length(VE.vec)){
   }
 }
 
-# plot the results
-pdf('../output/supplement_figure_S40_Theta_vs_FOI.pdf',width=3.25,height=3.25)
+## plot the results
+pdf('../output/FigureS40_Theta_vs_FOI.pdf',width=3.25,height=3.25)
 
 par(mar=c(4,4,1,1))
 
